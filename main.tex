@@ -96,8 +96,8 @@ Like most people have talked to, I don't have a conclusive answer the current ch
   In my experiences, many students start to cheat when they feel discouraged by the material or anxious about their grade. 
   This group of students is the focus of my engagement effort. 
   Besides engaging with realistic and interesting examples, I also make sure that grading metrics provides guidance for students to improve the learning outcome, but not punishments.
-  This effort is extensively studied in game design, and my approach indeed draws inspirations from other fields: give opportunities for students to quickly recover from their mistake and provide students an alternative path forward.
-  Specifically, I prefer a lax yet effective attendance system, extensive office hour, and online presence through piazza, resubmission for partial (or full) credit, quick and actionable feedback, include extra credit problems in most assignments, and many methods to encourage study groups. 
+  This effort is extensively studied in game design~\cite{engelstein_AchievementRelockedLoss_2020,lewis_MotivationalGameDesign_2012}, and my approach indeed draws inspirations from other fields: give opportunities for students to quickly recover from their mistake and provide students an alternative path forward.
+  Specifically, I prefer a lax yet effective attendance system, extensive office hour, and online presence through piazza, resubmission for partial (or full) credit, quick and actionable feedback, include extra credit problems in most assignments, cheat sheet, and many methods to encourage study groups. 
   \item \textbf{Exploration:} Besides homework, exam, and extra credit problems, I want to also provide plenty of opportunities to mentor student to further explore their interest. 
   These include study/reading group, research seminars, and undergrad research opportunities.
   I have extensive experience organizing study/reading group during my time at BU, we have long-running MathComp (Coq) and category theory reading groups, both organized by me. 
@@ -111,10 +111,47 @@ During this process, I have obtained extensive experience organizing graders, wo
 I want to present my philosophy through the designing of our Haskell course (2019 Spring, Principle of Programming Language). 
 I will illustrate my thought process when co-designing this class, and a number of improvements I seek to adopt in my future teaching. 
 
+\section{Case Study: Functional Programming Class With Haskell}
 
+We specifically choose Haskell as a teaching language because of its clear and consistent semantics and syntax. 
+Compare to impure languages like Ocaml or Scala, Haskell will prevent student from using impure construct like references, or loops, and forces students to think in functional ways.
+We make the distinction between Haskell and impure languages very clear, and give some examples of how programming with impure structures can lead to code that are hard to reason about.
 
-%\newpage
-%\printbibliography %Prints bibliography
+To facilitate student recover from missing/forgotten homework, we give a generous grace period for homework submission (a random value average to around half a day).
+We also allow student to resubmit two homework at the end of the semester for full credit.
+We had extensive online presence on piazza and sufficient office hours to help students through hard questions.
+The office hours are intentionally set away from homework deadline to encourage an early start on homework, and collaborative discussion on piazza later.
+
+For feedback, we implemented our grading system using QuickCheck, and make all the tests available to students. 
+QuickCheck tests can immediately provide students with counter-example and allow the student to effective debug their program.
+The choice to provide tests directly to students requires extensive effort to make sure our tests the through, yet do not leak the answer to the homework problem. 
+But we feel the immediate feedback certainly breaks down a lot of barriers for students. 
+However, in the rare case where students have fundamental misunderstanding of concepts, QuickCheck counter-example is unlikely to help them.
+Currently, we hope that students encountering these questions can ask online or in study groups. 
+In the long run, I am thinking about implementing misconception-based teaching tool like LTL tutor~\cite{plt_LTLTutor_2024} to further facilitate student learning.
+I would be glad to work with social scientists, HCI experts to design more effective teaching systems.
+
+Finally, to decide on the class material, we first pinpointed four core concepts to teach in this class: \emph{functional programming}, \emph{algebraic data type}, \emph{type-driven programming}, and \emph{monad}.
+The most challenging of them is certainly Monad. 
+We have decided to introduce monad as a ``design pattern'' as opposed to its mathematical counterpart; we hope with abundant examples, we will make this concept approachable for students.
+Then, our entire semester of curriculum is designed around these four core concepts.
+
+We start with Haskell without prelude, and demonstrated the implementation of familiar structures like natural number, lists, and maybe type.
+This exercise allows student to practice defining, destructing, and implementing recursion on algebraic data types.
+Then, we move on to let student implement and use functional primitives like ``map'', ``filter'', and ``fold'' to familiarize them with manipulating collection data structures in a functional way.
+In teaching these functions, we will list the type of all the inputs, and show that the inputs only have one way to be combined, demonstrating the power of type-driven development.
+Finally, we will talk about the type of state, reader, and writer, then try to do small computations with them.
+After the student is comfortable tracing these monads, then we introduce the do expression, and the concept of monad.
+The final project is split into several assignments, asking students to implement a simple parser using the parser monad.
+Most students were able to figure out the monad implementation using type-driven development, and were able to trace the semantics of the monad, and can implement a simple functional parser. 
+Many can even figure out how to deal with associativity with some examples.
+
+I think this class design reflects my philosophy of teaching. We worked very hard to provide student with rapid feedback, and plenty of ways to get help. 
+As a consequence, students feels that they are making progress and solving problems. 
+I think the success of our approach is also reflected in our final project, most students can produce a competent parser in weeks, with no prior experiences, demonstrating effective utilization the four core concepts.
+
+\newpage
+\printbibliography %Prints bibliography
 
 
 \end{document}
