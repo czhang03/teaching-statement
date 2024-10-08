@@ -86,8 +86,8 @@ By engaging and inspiring my students, I aim to equip them with the skills, conf
 \section{Teaching Philosophy}
 
 The wide availability of information has transformed the way we learn and works. 
-Rather than viewing emerging technologies as a threat to education, I see them as an opportunity to shift teaching focus from mundane memorization to mastering core concepts to solve diverse problems.
-While I don't pretend to have all the answers to the challenges facing education today, yet my experiences as both a student and a teacher have led me to identify several key strategies that can help achieve this goal.
+Rather than viewing emerging technologies as a threat to education, I see them as an opportunity to shift teaching focus from mundane memorization to mastering abstract core concepts and apply them on realistic problems.
+While I don't pretend to have all the answers to the challenges facing education today, my experiences as both a student and a teacher have led me to identify several key strategies that can help achieve this goal.
 \begin{itemize}
   \item \textbf{Core Concepts:}
   Simplicity is the key to engaging and effective learning, thus my classes are always centered around several widely-applicable yet simple core concepts. 
@@ -100,8 +100,8 @@ While I don't pretend to have all the answers to the challenges facing education
   I've observed that students often resort to cheating when they feel overwhelmed by the material or anxious about their grades. 
   Rather than relying strictly on cheat-detection systems, I focus on engaging these students and addressing the underlying issues. 
   To accomplish this, I design the homework and exams to provide constructive feedback and support, rather than discouragement. 
-  Drawing inspiration from game design strategies~\cite{engelstein_AchievementRelockedLoss_2020,lewis_MotivationalGameDesign_2012}, I aim to allow students to quickly recover from mistakes, and to have a clear alternative path to success.
-  \item \textbf{Exploration:} Besides homework, exam, and extra credit problems, I want to also provide plenty of opportunities to mentor student to further explore their interest. 
+  To accomplish this goal, I identified two priciples with inspiration from game design~\cite{engelstein_AchievementRelockedLoss_2020,lewis_MotivationalGameDesign_2012}: allow students to quickly recover from mistakes, and have a clear alternative path to success.
+  \item \textbf{Exploration:} Besides homework, exam, and extra credit problems, I strive to also provide abundant opportunities to mentor student to further explore their interest. 
   These include study/reading group, research seminars, and undergrad research opportunities.
 \end{itemize}
 
@@ -110,7 +110,7 @@ While I don't pretend to have all the answers to the challenges facing education
 Throughout my academic journey at Boston University, I have extensive experience in event organization and teaching, with a proven track record of creating engaging learning experiences for both graduate and undergraduate students.
 
 As the founder and organizer of several study groups and seminars, I have successfully fostered a culture of collaborative learning and intellectual exploration among students of all levels. 
-Notably, I established and led long-running reading groups focused on Coq/SSReflect and category theory, as well as the BU POPV seminar, which attracted researchers and students from within and beyond the university to share innovative research ideas and opportunities.
+Notably, I organized the long-running BU POPV seminar and also reading groups focused on Coq/SSReflect and category theory, which attracted researchers and students from within and beyond the university to learn and share innovative research ideas.
 As a teaching assistant for a diverse range of courses, including introductory programming, algebraic algorithm (basic number theory and abstract algebra), geometric algorithm (linear algebra), and programming languages, I have honed my skills in classroom management, student support, and curriculum design. 
 Serving as a TA in many classes have given me invaluable experience in leading different grading teams, developing course materials, and also shaped my teaching philosophies.
 In addition to my teaching assistant roles, I have had the privilege of mentoring two talented undergraduate researchers through the UR2PhD program. 
@@ -126,7 +126,7 @@ Over the course of a year, we worked together on cutting-edge research in Kleene
 
 \section{Case Study: Functional Programming Class With Haskell}
 
-To illustrate my teaching philosophy, I'd like to share my experience co-designing a Haskell course, "CS320 Principle of Programming Language," in Spring 2019.
+To illustrate my teaching philosophy, I'd like to share my experience co-designing a Haskell course, "CS320 Concepts of Programming Language," in Spring 2019.
 I will walk through my thought process and highlight the key improvements I aim to incorporate into my future teaching practices.
 
 We chose Haskell as the teaching language due to its clear and consistent syntax and semantics. 
@@ -138,7 +138,7 @@ We also implemented a generous grace period for submissions, averaging around ha
 
 To provide rapid feedback for homework, our grading system utilized QuickCheck which can provide immediate counter-examples to facilitate effective debugging. 
 While this approach required significant effort to ensure that our tests were thorough yet did not reveal answers, we believe that the benefits of immediate offline feedback outweigh the costs. 
-However, we acknowledge that QuickCheck may not be sufficient for students with fundamental conceptual misunderstandings. 
+However, we acknowledge that mere counterexamples may not be sufficient for students with fundamental conceptual misunderstandings. 
 To address this, we encouraged students to seek help online or in study groups. 
 In the future, I am considering the development of misconception-based teaching tools, such as the LTL Tutor~\cite{plt_LTLTutor_2024}, to further support student learning. 
 I am always eager to collaborate with social scientists, HCI experts, and students to design effective teaching systems that cater to diverse learning needs.
@@ -151,13 +151,13 @@ We guided students through the implementation of familiar structures like boolea
 Next, we had students implement and use functional primitives like ``map'', ``filter'', and ``fold'' to familiarize them with manipulating collection data structures.
 When implementing these primitives, we demonstrate type driven development by listing the type of all the available arguments, and show that function like ``map'' and ``fold'' can be implemented in one meaningful way.
 
-We then introduced the type of reader and state monad, without introducing monads, and had students work on small computations using these types. 
+We then introduced the data type of reader and state monad, without introducing monads, and had students work on small computations using these types. 
 Once students were comfortable tracing the monadic computations, we introduced the concept of monads and do expressions. 
 The final project, which is split into several assignments, asked students to implement a simple parser using the parser monad. 
 Most students were able to successfully implement the parser monad using type-driven development, understand the semantics of the monad, and create a functional parser. 
 Many were even able to handle associativity with the help of examples.
 
-I believe that this class design reflects my teaching philosophy, which emphasizes providing students with feedback, support and path for recovery. 
+I believe that this class design reflects my teaching philosophy, which focus on few important abstract concepts while providing students with rapid feedback and support. 
 As a result, students felt a sense of progress and accomplishment as they solved problems, but not punished when they fail. 
 The success of our approach is evident in the final project, where most students were able to produce a competent parser in just a few weeks, with no prior experience, demonstrating effective utilization of the four core concepts.
 
